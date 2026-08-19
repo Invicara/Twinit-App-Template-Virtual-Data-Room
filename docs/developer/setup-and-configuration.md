@@ -32,6 +32,7 @@ This deploys:
 - `sections-api.mjs` — logic for sections, subsections, and links
 - `documents-api.mjs` — logic for document status, versions, and trash
 - `search-api.mjs` — full-text search and trash search
+- `users-api.mjs` - user and user group management
 
 See the [Backend API](./backend-api.md) doc for details on what these scripts do.
 
