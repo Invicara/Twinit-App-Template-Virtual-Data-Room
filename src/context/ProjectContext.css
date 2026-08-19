@@ -1,0 +1,210 @@
+.project-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.1rem;
+  color: var(--fg, #ccc);
+}
+
+.project-error {
+  color: #f87171;
+}
+
+.project-picker-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.project-picker-dialog {
+  background: var(--bg, #1e1e2e);
+  border: 1px solid var(--border, #3f3f5a);
+  border-radius: 10px;
+  padding: 2rem;
+  min-width: 320px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.project-picker-dialog h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.2rem;
+  color: var(--fg, #e0e0f0);
+}
+
+.project-picker-search {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--border, #3f3f5a);
+  background: transparent;
+  color: var(--fg, #e0e0f0);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.project-picker-search:focus {
+  border-color: var(--accent, #7c7cff);
+}
+
+.project-picker-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.project-picker-list button {
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border, #3f3f5a);
+  background: transparent;
+  color: var(--fg, #e0e0f0);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.project-picker-list button:hover {
+  background: var(--hover, #2e2e4e);
+}
+
+.project-picker-empty {
+  color: var(--fg-muted, #888);
+  font-size: 0.9rem;
+}
+
+.project-picker-invites {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border, #3f3f5a);
+  padding-top: 1rem;
+}
+
+.project-picker-invites-title {
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent, #7c7cff);
+}
+
+.project-picker-invites-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-picker-invite-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border, #3f3f5a);
+  border-radius: 6px;
+  background: var(--accent-bg, rgba(124, 124, 255, 0.06));
+}
+
+.project-picker-invite-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.project-picker-invite-room {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--fg, #e0e0f0);
+}
+
+.project-picker-invite-detail {
+  font-size: 0.8rem;
+  color: var(--fg-muted, #888);
+}
+
+.project-picker-invite-actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.project-picker-invite-accept,
+.project-picker-invite-decline {
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.project-picker-invite-accept:disabled,
+.project-picker-invite-decline:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-picker-invite-accept {
+  background: var(--brand, #00857c);
+  color: #fff;
+  border-color: var(--brand, #00857c);
+}
+
+.project-picker-invite-accept:hover:not(:disabled) {
+  background: var(--brand-light, #33a89f);
+  border-color: var(--brand-light, #33a89f);
+}
+
+.project-picker-invite-decline {
+  background: transparent;
+  color: var(--fg-muted, #888);
+  border-color: var(--border, #3f3f5a);
+}
+
+.project-picker-invite-decline:hover:not(:disabled) {
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+  border-color: #f87171;
+}
+
+.project-picker-footer {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-picker-logout {
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border, #3f3f5a);
+  background: transparent;
+  color: var(--fg-muted, #888);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.project-picker-logout:hover {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+  border-color: #f87171;
+}

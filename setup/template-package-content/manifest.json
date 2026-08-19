@@ -1,0 +1,86 @@
+{
+    "Template Name": "Virtual Data Room",
+    "Template Version": "1.0.2",
+    "configs": [],
+    "omapiConfig": [
+        {
+            "_name": "VDR-API",
+            "_shortName": "Virtual Data Room API",
+            "_description": "Virtual Data Room API"
+        }
+    ],
+    "scripts": [
+        {
+            "_name": "sections-api",
+            "_shortName": "sections-api",
+            "_description": "Sections API",
+            "_userType": "sections-api"
+        },
+        {
+            "_name": "documents-api",
+            "_shortName": "documents-api",
+            "_description": "Documents API",
+            "_userType": "documents-api"
+        },
+        {
+            "_name": "search-api",
+            "_shortName": "search-api",
+            "_description": "Search API",
+            "_userType": "search-api"
+        },
+        {
+            "_name": "users-api",
+            "_shortName": "users-api",
+            "_description": "Users API",
+            "_userType": "users-api"
+        }
+    ],
+    "namedUserCollections": [
+        {
+            "ifExists": "recreate",
+            "_name": "Sections",
+            "_shortName": "Sections",
+            "_description": "Sections",
+            "_userType": "sections"
+        },
+        {
+            "ifExists": "recreate",
+            "_name": "Subsections",
+            "_shortName": "Subsections",
+            "_description": "subsections",
+            "_userType": "subsections"
+        },
+        {
+            "ifExists": "recreate",
+            "_name": "Document Logs",
+            "_shortName": "document-logs",
+            "_description": "Document Log Items",
+            "_userType": "document-logs"
+        },
+        {
+            "ifExists": "recreate",
+            "_name": "Links",
+            "_shortName": "links",
+            "_description": "Subsection Links",
+            "_userType": "links"
+        },
+        {
+            "ifExists": "recreate",
+            "_name": "Link Logs",
+            "_shortName": "link-logs",
+            "_description": "Link Log Items",
+            "_userType": "link-logs"
+        }
+    ],
+    "userGroups": [
+        {
+            "_name": "Room Admin",
+            "_shortName": "Admin",
+            "_description": "Virtual Data Room Admin Group",
+            "permissions": {
+               "accessAll": true
+            }
+         }
+    ],
+    "setupScript": "custom/custom-setup.mjs"
+ }

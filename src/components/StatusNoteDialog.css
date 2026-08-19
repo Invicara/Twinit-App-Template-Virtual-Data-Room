@@ -1,0 +1,160 @@
+.status-note-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.status-note-dialog {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.status-note-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.status-note-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.status-note-docname {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.status-note-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted, #888);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-note-close {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.status-note-close:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.status-note-close svg {
+  width: 16px;
+  height: 16px;
+}
+
+.status-note-body {
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status-note-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.status-note-optional {
+  font-weight: 400;
+  color: var(--text-muted, #888);
+}
+
+.status-note-textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 72px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.8rem;
+  font-family: inherit;
+  line-height: 1.5;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.status-note-textarea:focus {
+  outline: none;
+  border-color: var(--accent, #3b82f6);
+}
+
+.status-note-textarea::placeholder {
+  color: var(--text-muted, #aaa);
+}
+
+.status-note-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.status-note-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.status-note-btn--cancel {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text-muted, #888);
+}
+
+.status-note-btn--cancel:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.status-note-btn--confirm {
+  background: var(--accent, #3b82f6);
+  color: #fff;
+}
+
+.status-note-btn--confirm:hover {
+  filter: brightness(1.1);
+}

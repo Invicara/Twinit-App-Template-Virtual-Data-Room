@@ -1,0 +1,21 @@
+.cancel-button {
+  padding: 10px 20px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  background: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cancel-button:hover:not(:disabled) {
+  background: var(--border);
+  color: var(--text-h);
+}
+
+.cancel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

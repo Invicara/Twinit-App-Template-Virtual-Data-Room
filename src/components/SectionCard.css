@@ -1,0 +1,251 @@
+.section-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  box-sizing: border-box;
+  background: var(--bg);
+}
+
+.subsection-table {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.subsection-table-header {
+  display: grid;
+  grid-template-columns: 24px 80px 1fr 1fr 100px;
+  gap: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.section-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+}
+
+.section-card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.section-card-title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.section-card-role-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.section-card-role {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text);
+  opacity: 0.6;
+  letter-spacing: 0.03em;
+}
+
+.section-card-admins-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 2px;
+  color: var(--text);
+  opacity: 0.5;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: opacity 0.15s, color 0.15s, background 0.15s;
+}
+
+.section-card-admins-btn svg {
+  width: 13px;
+  height: 13px;
+}
+
+.section-card-admins-btn:hover {
+  opacity: 1;
+  color: var(--brand);
+  background: var(--border);
+}
+
+.section-admins-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-admins-popup {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  min-width: 220px;
+  max-width: 360px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.section-admins-title {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-h);
+  letter-spacing: 0.02em;
+}
+
+.section-admins-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.section-admins-empty {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted, #888);
+  font-style: italic;
+}
+
+.section-admins-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-admins-list li {
+  font-size: 0.875rem;
+  color: var(--text);
+  padding: 4px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-admins-list li:last-child {
+  border-bottom: none;
+}
+
+.section-card-number {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.section-card-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.section-card-edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  padding: 4px;
+  margin-left: 4px;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.15s, color 0.15s, background 0.15s;
+}
+
+.section-card-edit svg {
+  width: 15px;
+  height: 15px;
+}
+
+.section-card:hover .section-card-edit {
+  opacity: 1;
+}
+
+.section-card:hover .section-card-edit:disabled {
+  opacity: 0.35;
+}
+
+.section-card-edit:hover:not(:disabled) {
+  color: var(--brand);
+  background: var(--border);
+}
+
+.section-card-edit:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.section-card-empty {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--text-muted, #888);
+  font-style: italic;
+}
+
+.section-card-error {
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--error, #c0392b);
+}
+
+.section-card-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 0 4px;
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.section-card-footer {
+  padding-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-card-expand-all {
+  margin-left: auto;
+  background: none;
+  border: none;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.section-card-expand-all:hover {
+  color: var(--brand);
+  background: var(--border);
+}

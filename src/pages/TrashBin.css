@@ -1,0 +1,160 @@
+#center:has(.trash-bin) {
+  place-content: start;
+  place-items: start;
+}
+
+.trash-bin {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.trash-bin-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.trash-bin-header h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trash-bin-title-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: var(--text-h);
+}
+
+.trash-bin-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.trash-bin-back:hover {
+  color: var(--brand);
+}
+
+.trash-bin-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: var(--text);
+  font-size: 0.9375rem;
+}
+
+.trash-bin-error {
+  color: #f87171;
+}
+
+.trash-bin-section {
+  margin-top: 32px;
+}
+
+.trash-bin-section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+.trash-bin-empty {
+  font-size: 0.875rem;
+  color: var(--text);
+  margin: 0;
+  padding: 12px 0;
+}
+
+/* Document table override — 8 columns (adds restore after trash) */
+.trash-document-table .document-table-header,
+.trash-document-table .document-table-row {
+  grid-template-columns: 16px 360px 60px 1fr 28px 28px 28px 28px;
+}
+
+/* Link table override — 8 columns (no edit, adds restore before trash) */
+.trash-link-table .link-table-header,
+.trash-link-table .link-table-row {
+  grid-template-columns: 176px 332px 1fr 28px 28px 28px 28px 28px;
+}
+
+.link-row-delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.link-row-delete svg {
+  width: 14px;
+  height: 14px;
+}
+
+.link-row-delete:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--error, #c0392b) 12%, transparent);
+  color: var(--error, #c0392b);
+}
+
+.link-row-delete--disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.link-row-restore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.link-row-restore svg {
+  width: 14px;
+  height: 14px;
+}
+
+.link-row-restore:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--brand) 12%, transparent);
+  color: var(--brand);
+}
+
+.link-row-restore--spinning {
+  cursor: default;
+  color: var(--brand);
+}
+
+.link-row-restore--spinning svg {
+  animation: spin 0.8s linear infinite;
+}

@@ -1,0 +1,30 @@
+.trash-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  background: none;
+  color: #f87171;
+  border: 1px solid #f87171;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.trash-button:hover:not(:disabled) {
+  background: #f87171;
+  color: #fff;
+}
+
+.trash-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.trash-button-icon {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+}

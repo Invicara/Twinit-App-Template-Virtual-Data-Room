@@ -1,0 +1,50 @@
+.subsection-status-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.subsection-status-bar {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--border);
+  display: flex;
+}
+
+.subsection-status-bar-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.subsection-status-bar-segment--approved {
+  background: #27ae60;
+}
+
+.subsection-status-bar-segment--rejected {
+  background: #e74c3c;
+}
+
+.subsection-status-bar-segment--review {
+  background: #95a5a6;
+}
+
+.subsection-status-bar-total {
+  font-size: 0.75rem;
+  color: var(--text-muted, #888);
+  font-variant-numeric: tabular-nums;
+  min-width: 16px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.subsection-status-bar-empty {
+  color: var(--text-muted, #888);
+  font-size: 0.875rem;
+}
+
+.subsection-status-bar-spinner {
+  width: 12px;
+  height: 12px;
+}

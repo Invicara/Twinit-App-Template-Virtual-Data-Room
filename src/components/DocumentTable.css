@@ -1,0 +1,417 @@
+.document-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 0.8125rem;
+}
+
+.document-table-header {
+  display: grid;
+  grid-template-columns: 16px 360px 60px 1fr 28px 28px 28px;
+  gap: 8px;
+  padding: 0 6px 5px;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+
+.document-header-view {
+  justify-self: center;
+}
+
+.document-header-version,
+.document-header-status {
+  text-align: center;
+}
+
+.document-table-row {
+  display: grid;
+  grid-template-columns: 16px 360px 60px 1fr 28px 28px 28px;
+  gap: 8px;
+  padding: 5px 6px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+
+.document-table-row:last-child {
+  border-bottom: none;
+}
+
+.document-table-row:hover {
+  background: color-mix(in srgb, var(--border) 40%, transparent);
+  border-radius: 4px;
+}
+
+.document-table-row--highlighted {
+  animation: throb 2.4s ease-in-out;
+  border-radius: 4px;
+}
+
+.document-row-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-muted, #888);
+  border-radius: 3px;
+  transition: color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.document-row-toggle svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.2s;
+}
+
+.document-row-toggle--open svg {
+  transform: rotate(180deg);
+}
+
+.document-row-toggle--hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.document-row-toggle:hover {
+  color: var(--brand);
+  background: var(--border);
+}
+
+.document-version-history {
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--border) 25%, transparent);
+}
+
+.document-version-loading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px 6px 28px;
+  font-size: 0.75rem;
+  color: var(--text-muted, #888);
+}
+
+.document-version-header,
+.document-version-row {
+  display: grid;
+  grid-template-columns: 16px 40px 110px 1fr 140px 110px 22px 22px;
+  gap: 8px;
+  padding: 4px 6px;
+  align-items: center;
+}
+
+.document-version-header {
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2px;
+}
+
+.document-version-header-cell {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted, #888);
+}
+
+.document-version-row:last-child {
+  padding-bottom: 6px;
+}
+
+.document-version-cell {
+  font-size: 0.75rem;
+  color: var(--text-muted, #888);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.document-version-cell-version {
+  font-variant-numeric: tabular-nums;
+}
+
+.document-version-cell-message {
+  color: var(--text);
+}
+
+.document-version-cell-date {
+  font-variant-numeric: tabular-nums;
+}
+
+.document-cell {
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.document-cell-name {
+  font-weight: 500;
+  text-align: left;
+}
+
+.document-cell-status {
+  text-align: center;
+}
+
+
+.document-cell-version {
+  color: var(--text-muted, #888);
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+/* Version download link */
+.document-version-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  color: var(--text-muted, #888);
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.document-version-download svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.document-version-download:hover {
+  background: var(--border);
+  color: var(--brand);
+}
+
+.document-version-download--disabled {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* View History button */
+.document-version-history-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.document-version-history-btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.document-version-history-btn:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.document-row-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.document-row-view svg {
+  width: 16px;
+  height: 16px;
+}
+
+.document-row-view:hover {
+  background: var(--border);
+  color: var(--brand);
+}
+
+.document-row-view-spacer {
+  width: 28px;
+  height: 28px;
+  justify-self: center;
+}
+
+.document-row-download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.document-row-download svg {
+  width: 16px;
+  height: 16px;
+}
+
+.document-row-download:hover {
+  background: var(--border);
+  color: var(--brand);
+}
+
+.document-row-download-spacer {
+  width: 28px;
+  height: 28px;
+}
+
+.document-row-trash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.document-row-trash svg {
+  width: 16px;
+  height: 16px;
+}
+
+.document-row-trash:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--error, #c0392b) 12%, transparent);
+  color: var(--error, #c0392b);
+}
+
+.document-row-trash--disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.document-row-restore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-muted, #888);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.document-row-restore svg {
+  width: 16px;
+  height: 16px;
+}
+
+.document-row-restore:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--brand) 12%, transparent);
+  color: var(--brand);
+}
+
+.document-row-restore--spinning {
+  cursor: default;
+  color: var(--brand);
+}
+
+.document-row-restore--spinning svg {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.document-viewer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  padding: 5rem;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+}
+
+.document-viewer-panel {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35);
+}
+
+.document-viewer-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  transition: color 0.15s, background 0.15s;
+}
+
+.document-viewer-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.document-viewer-close:hover {
+  color: var(--brand);
+  background: var(--border);
+}
+
+.document-viewer-frame {
+  flex: 1;
+  min-height: 0;
+  padding-top: 44px;
+  box-sizing: border-box;
+}
+

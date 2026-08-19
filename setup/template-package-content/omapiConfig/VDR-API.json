@@ -1,0 +1,394 @@
+[
+   {
+      "endpoints": {
+         "sections": {
+            "paths": [
+               {
+                  "path": "/sections",
+                  "method": "OPTIONS",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "returnStatus"
+                  }
+               },
+               {
+                  "path": "/sections",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "getSections"
+                  }
+               },
+               {
+                  "path": "/sections",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "createSection"
+                  }
+               },
+               {
+                  "path": "/sections/:id",
+                  "method": "PUT",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "updateSection"
+                  }
+               },
+               {
+                  "path": "/sections/:id/trash",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "trashSection"
+                  }
+               },
+               {
+                  "path": "/sections/:id/untrash",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "untrashSection"
+                  }
+               },
+               {
+                  "path": "/sections/:id",
+                  "method": "DELETE",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "deleteSection"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "getSubsections"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "createSubsection"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid",
+                  "method": "PUT",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "updateSubsection"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/trash",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "trashSubsection"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/untrash",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "untrashSubsection"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid",
+                  "method": "DELETE",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "deleteSubsection"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/status",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "getSubsectionStatus"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/documents",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "getDocuments"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/links",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "getLinks"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/links",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "createLink"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/links/:linkid/status",
+                  "method": "PUT",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "updateLinkStatus"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/links/:linkid",
+                  "method": "PUT",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "updateLink"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/links/:linkid/trash",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "trashLink"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/links/:linkid/untrash",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "untrashLink"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/links/:linkid",
+                  "method": "DELETE",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "deleteLink"
+                  }
+               },
+               {
+                  "path": "/sections/:id/subsections/:subid/links/:linkid/logs",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "getLinkLogs"
+                  }
+               }
+            ]
+         },
+         "documents": {
+            "paths": [
+               {
+                  "path": "/documents",
+                  "method": "OPTIONS",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "returnStatus"
+                  }
+               },
+               {
+                  "path": "/documents",
+                  "method": "OPTIONS",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "returnStatus"
+                  }
+               },
+               {
+                  "path": "/documents/statuses",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "getDocumentStatuses"
+                  }
+               },
+               {
+                  "path": "/documents/:fileid/status",
+                  "method": "PUT",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "setDocumentStatus"
+                  }
+               },
+               {
+                  "path": "/documents/:fileid/trash",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "trashDocument"
+                  }
+               },
+               {
+                  "path": "/documents/:fileid/untrash",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "untrashDocument"
+                  }
+               },
+               {
+                  "path": "/documents/:fileid",
+                  "method": "DELETE",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "deleteDocument"
+                  }
+               },
+               {
+                  "path": "/documents/:fileid/versions",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "getDocumentVersions"
+                  }
+               },
+               {
+                  "path": "/documents/:fileid/versions/:versionid/logs",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "getDocumentLogs"
+                  }
+               },
+               {
+                  "path": "/documents/:fileid/versions/:versionid/vectorize",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "documents-api",
+                     "_scriptName": "vectorizeDocumentVersion"
+                  }
+               }
+            ]
+         },
+         "search": {
+            "paths": [
+               {
+                  "path": "/search",
+                  "method": "OPTIONS",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "returnStatus"
+                  }
+               },
+               {
+                  "path": "/search",
+                  "method": "OPTIONS",
+                  "script": {
+                     "_userType": "search-api",
+                     "_scriptName": "returnStatus"
+                  }
+               },
+               {
+                  "path": "/search",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "search-api",
+                     "_scriptName": "search"
+                  }
+               },
+               {
+                  "path": "/search/trash",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "search-api",
+                     "_scriptName": "searchTrash"
+                  }
+               }
+            ]
+         },
+         "users": {
+            "paths": [
+               {
+                  "path": "/users",
+                  "method": "OPTIONS",
+                  "script": {
+                     "_userType": "sections-api",
+                     "_scriptName": "returnStatus"
+                  }
+               },
+               {
+                  "path": "/users/me",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "users-api",
+                     "_scriptName": "getMe"
+                  }
+               },
+               {
+                  "path": "/users",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "users-api",
+                     "_scriptName": "getAllUsers"
+                  }
+               },
+               {
+                  "path": "/users/:userid/groups",
+                  "method": "DELETE",
+                  "script": {
+                     "_userType": "users-api",
+                     "_scriptName": "removeUserFromAllGroups"
+                  }
+               },
+               {
+                  "path": "/users/groups",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "users-api",
+                     "_scriptName": "getUserGroups"
+                  }
+               },
+               {
+                  "path": "/users/groups/:groupid/users",
+                  "method": "GET",
+                  "script": {
+                     "_userType": "users-api",
+                     "_scriptName": "getGroupUsers"
+                  }
+               },
+               {
+                  "path": "/users/invite",
+                  "method": "POST",
+                  "script": {
+                     "_userType": "users-api",
+                     "_scriptName": "inviteUsers"
+                  }
+               },
+               {
+                  "path": "/users/groups/:groupid/users/:userid",
+                  "method": "DELETE",
+                  "script": {
+                     "_userType": "users-api",
+                     "_scriptName": "removeUserFromGroup"
+                  }
+               },
+               {
+                  "path": "/users/groups/:groupid/invites/:inviteid",
+                  "method": "DELETE",
+                  "script": {
+                     "_userType": "users-api",
+                     "_scriptName": "cancelInvite"
+                  }
+               }
+            ]
+         }
+      },
+      "schema_version": 2,
+      "settings": {
+         "apiConfig": true
+      }
+   }
+]

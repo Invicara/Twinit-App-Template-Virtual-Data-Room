@@ -1,0 +1,89 @@
+.auth-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.1rem;
+  color: var(--fg, #ccc);
+}
+
+.auth-error {
+  color: #f87171;
+}
+
+.session-expired-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
+}
+
+.session-expired-dialog {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  max-width: 360px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.session-expired-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+.session-expired-dialog h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text-h);
+}
+
+.session-expired-dialog p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.session-expired-btn {
+  margin-top: 0.5rem;
+  padding: 10px 28px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.session-expired-btn:hover {
+  opacity: 0.88;
+}
+
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    padding: 32px 20px 24px;
+    gap: 18px;
+  }
+}
